@@ -17,7 +17,7 @@
     };
 
     buyController.getToBuyEmpty = function () {
-      ShoppingListCheckOffService.getToBuyEmpty();
+      return this.items.length > 0;
     };
 
   }
@@ -34,7 +34,7 @@
     };
 
     boughtController.getBoughtEmpty = function () {
-      ShoppingListCheckOffService.getBoughtEmpty();
+      return this.items.length > 0;
     };
 
   }
@@ -57,23 +57,6 @@
       let element = itemsBought.splice(itemIndex, 1)[0];
       itemsToBuy.push(element);
     };
-
-    service.getToBuyEmpty = function () {
-      if (itemsToBuy.length == 0) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
-    service.getBoughtEmpty = function () {
-      if (itemsBought.length == 0) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
 
     service.getItemsToBuy = function () {
       return itemsToBuy;
