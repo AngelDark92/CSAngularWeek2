@@ -17,7 +17,7 @@
     };
 
     buyController.getToBuyEmpty = function () {
-      return this.items.length > 0;
+      return ShoppingListCheckOffService.checkIfEmpty(this.items);
     };
 
   }
@@ -34,9 +34,8 @@
     };
 
     boughtController.getBoughtEmpty = function () {
-      return this.items.length > 0;
+      return ShoppingListCheckOffService.checkIfEmpty(this.items);
     };
-
   }
 
 
@@ -57,6 +56,10 @@
       let element = itemsBought.splice(itemIndex, 1)[0];
       itemsToBuy.push(element);
     };
+
+    service.checkIfEmpty = function (items){
+      return items.length > 0;
+    }
 
     service.getItemsToBuy = function () {
       return itemsToBuy;
