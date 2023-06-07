@@ -1,6 +1,9 @@
 # CSAngularWeek2
 **Ready to implement some cool dynamic behavior right in your web page?! Oh, and do it in an architecturally correct/elegant way?!**
 
+## GitHub Page
+[Github Page for this Project](https://angeldark92.github.io/CSAngularWeek2/)
+
 ## Time to Complete
 It should take about 1 hour or less. (This is just an estimate. People's backgrounds differ, so for some people it will take longer to complete.)
 
